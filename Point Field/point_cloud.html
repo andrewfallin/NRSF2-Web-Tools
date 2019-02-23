@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <title>NRSF2!</title>
+</head>
+
+<body>
+  <h1>NRSF2!</h1>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">  <script src="time_form.js"></script>
+  <script src="my_objects.js"></script>
+  <script src="element_objects.js"></script>
+  <script src="point_cloud.js"></script>
+  <script src="point_object.js"></script>
+  <script src="testplot.js"></script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="time.css">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+
+        <p id="ele"></p>
+
+        <p id="abs-block">
+          <h5 style="display: inline; padding-right: 10px" id="title_col4">Total Linear Absorbtion:   </h5>
+          <p style="display: inline" id="tmol"></p>
+
+        </p>
+
+        <p id="thic-block">
+          <h5 style="display: inline; padding-right: 10px" id="title_thick">Dimensions:   </h5>
+          <p style="display: inline" id="thick"></p>
+
+        </p>
+
+        <div id="dimension-input">
+          <div id="dimension-label">
+            <h5 id="start" style="display: inline; padding-left: 30px">X</h5>
+            <h5 id="start" style="display: inline; padding-left: 60px">Y</h5>
+            <h5 id="start" style="display: inline; padding-left: 70px">Z</h5>
+            <h5 id="tt"style="display: inline; padding-left: 50px">2Ø</h5>
+          </div>
+
+          <div id="x">
+            <input type="text" class="form_control" id="xD" placeholder="(mm)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="yD" placeholder="(mm)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="zD" placeholder="(mm)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="t_theta" placeholder="90°" style="display: inline; width: 75px"></input>
+          </div>
+
+          <button type="button" class="btn btn-default" onclick="set_dimensions()" id="thick_button">Submit</button>
+          <a href="#" id="dimpop" data-toggle="popover" ><i class="fas fa-info-circle fa-lg" id="info" onclick="myalert()"></i></a>
+
+        </div>
+
+
+        <div class="form_group" id="timeACCO">
+
+          <div id="timecollapse" style="display: inline">
+            <div class="somelse" id="timecollapse" style="display: inline">
+              <button class="btn btn-default collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne" id="timeac">
+                     Enter Time
+            </button>
+            </div>
+            <a href="#" id="timepop" data-toggle="popover" ><i class="fas fa-info-circle fa-lg" id="info" onclick="myalert()"></i></a>
+
+
+            <div id="collapseThree" class="collapse" aria-labelledby="heading">
+              <div class="card-body">
+                <div class="form_group" id="top_form">
+
+                  <label form="enter_a_time" >Normalized Count Rate: </label>
+                  <input type="text" class="form_control" id="time" placeholder="(need placeholder)"></input>
+
+                  <div class="dropdown">
+
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="g1">2
+                  <span class="caret"></span></button>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="g2">2
+                  <span class="caret"></span></button>
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="g3">2
+                  <span class="caret"></span></button>
+
+
+                    <div class="dropdown-menu" id="dropdown-menu">
+                      <li onclick="time_dropdown(document.getElementById('.7').text)"><a id=".7" href="#">.7</a></li>
+                      <li onclick="time_dropdown(document.getElementById('1').text)"><a id="1" href="#">1</a></li>
+                      <li onclick="time_dropdown(document.getElementById('1.5').text)"><a id="1.5" href="#">1.5</a></li>
+                      <li onclick="time_dropdown(document.getElementById('2').text)"><a id="2" href="#">2</a></li>
+                      <li onclick="time_dropdown(document.getElementById('3').text)"><a id="3" href="#">3</a></li>
+                      <li onclick="time_dropdown(document.getElementById('4').text)"><a id="4" href="#">4</a></li>
+                      <li onclick="time_dropdown(document.getElementById('5').text)"><a id="5" href="#">5</a></li>
+                      <li onclick="time_dropdown(document.getElementById('7.5').text)"><a id="7.5" href="#">7.5</a></li>
+                      <li onclick="time_dropdown(document.getElementById('10').text)"><a id="10" href="#">10</a></li>
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-default" onclick="calc_arb_time()" id="time-button">Submit</button>
+                  <p id="time-block" style="display: inline">
+                    <h5 id="title_col5">Time:   </h5>
+                    <p style="display: inline" id="ti"></p>
+
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="lin-options" id="accordion">
+
+          <button class="btn btn-default collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="lin_abs">
+                                   Enter A Linear Absorbtion
+                          </button>
+
+          <button class="btn btn-default collapsed" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo" id="lin_abs">
+                                   Enter A Formula
+                          </button>
+        <a href="#" id="abspop" data-toggle="popover" ><i class="fas fa-info-circle fa-lg" id="info"></i></a>
+
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <div class="form_group" id="top_form">
+
+                <label form="enter_an_element">Enter Absorbtion: </label>
+                <input type="text" class="form_control" id="TLA" placeholder="(ex. 2.443)"></input>
+                <button type="button" class="btn btn-default" onclick="set_lin(parseFloat(document.getElementById('TLA').value)); document.getElementById('TLA').value='';  " id="lin_button">Submit</button>
+
+              </div>
+            </div>
+          </div>
+
+          <div id="collapsetwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+
+              <div class="form_group" id="top_form">
+                <label form="enter_an_element" id="eform">Enter a Formula: </label>
+                <input type="text" class="form_control" id="num4" placeholder="(ex. Fe3)"></input>
+              </div>
+
+              <div class="form_group">
+                <label form="enter_an_element" id="dform">Enter a Density: </label>
+                <input type="text" class="form_control" id="num5" placeholder="(g/cm3)"></input>
+              </div>
+
+              <button type="button" class="btn btn-default" onclick="object_handler()" id="submit_button">Submit</button>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div id="point-cloud">
+          <div id="sss">
+            <h5 id="start" style="display: inline; padding-left: 30px">Start</h5>
+            <h5 id="start" style="display: inline; padding-left: 32px">Stop</h5>
+            <h5 id="start" style="display: inline; padding-left: 32px">Step</h5>
+          </div>
+
+          <div id="x">
+            <h5 id="X" style="display: inline">X</h5>
+            <input type="text" class="form_control" id="startx" placeholder="(sec)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="stopx" placeholder="(sec)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="stepx" placeholder="(sec)" style="display: inline; width: 75px"></input>
+          </div>
+
+          <div id="y">
+            <h5 id="Y" style="display: inline">Y</h5>
+            <input type="text" class="form_control" id="starty" placeholder="(sec)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="stopy" placeholder="(sec)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="stepy" placeholder="(sec)" style="display: inline; width: 75px"></input>
+          </div>
+
+          <div id="z">
+            <h5 id="Z" style="display: inline">Z</h5>
+            <input type="text" class="form_control" id="startz" placeholder="(sec)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="stopz" placeholder="(sec)" style="display: inline; width: 75px"></input>
+            <input type="text" class="form_control" id="stepz" placeholder="(sec)" style="display: inline; width: 75px"></input>
+          </div>
+
+          <button type="button" class="btn btn-default" onclick="gather_points()" id="sss-button">Submit</button>
+          <a href="#" id="ssspop" data-toggle="popover" ><i class="fas fa-info-circle fa-lg" id="info"></i></a>
+
+        </div>
+
+
+        <table id="trace_tab" class="table table-hover">
+          <thead>
+            <tr>
+              <th>Trace</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+
+
+        </table>
+        <button id="export" class="btn btn-default" onclick="export_CSV()">Export Points to CSV</button>
+        <a href="#" id="csvpop" data-toggle="popover" ><i class="fas fa-info-circle fa-lg" id="info"></i></a>
+
+      </div>
+
+
+
+
+
+      <div class="col-lg-6">
+        <output id="list"></output>
+
+        <div id="balh"></div>
+        <div id="myDiv" style="width:100%;height:100%" ; <div id="table-div">
+
+          <table id="time-data" class="table table-hover">
+            <thead>
+              <tr>
+                <th>Direction</th>
+                <th>Total Time All Points (hrs)</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+
+        <table id="count-data" class="table table-hover" style="display:none;">
+          <thead>
+            <tr>
+              <th>Direction</th>
+              <th>Count Time (sec)</th>
+              <th>Path Length (mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+
+        </table>
+
+
+
+      </div>
+
+
+  </div>
+  </div>
+  <script src="time.js"></script>
+
+  <footer id="footer">
+  <p></p>
+</footer>
