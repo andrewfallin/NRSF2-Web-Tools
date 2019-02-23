@@ -1,0 +1,238 @@
+
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    /* 20px */
+    font-weight: 80;
+    font-size: 1.25rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    border-radius:  7px;
+    font-family: "Helvetica Neue";
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    background-color: rgb(180,251,196);
+    border: 1px solid grey;
+    /* 10px 20px */
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  font-weight: 150;
+}
+
+.no-js .inputfile + label {
+    display: none;
+
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+
+}
+
+.lin-options
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#lin_abs
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+
+  background-color: rgb(180,251,196);
+}
+
+#submit_button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#timeac
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#time-button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#timeac:hover
+{
+  font-weight: 150;
+}
+
+#time-button:hover
+{
+  font-weight: 150;
+
+}
+
+.dropdown
+{
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+.dropdown-menu
+{
+  padding-left: 10px;
+  background-color: rgb(227,227,227);
+  border-radius: 7px;
+  border-color: grey;
+
+}
+
+.dropdown-menu li:hover
+{
+  font-weight: 650;
+
+}
+
+.dropdown-menu > li > a
+{
+  color: black;
+
+}
+
+
+#g1 ,#g2, #g3
+{
+  font-weight: 80;
+  color: black;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#g1 ,#g2, #g3:hover
+{
+    font-weight: 150;
+}
+
+#thickness
+{
+  width: 28.5%;
+  border: 1px solid grey;
+  height: 35px;
+  margin-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+}
+#thick_button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#lin_button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#lin_abs:hover
+{
+  font-weight: 150;
+}
+
+#submit_button:hover
+{
+  font-weight: 150;
+}
+
+#thick_button:hover
+{
+    font-weight: 150;
+}
+
+#lin_button:hover
+{
+    font-weight: 150;
+}
+
+.thick-block
+{
+  padding-bottom: 3px;
+}
+
+#count-data
+{
+  width: 60%;
+  font-size: 8pt;
+  top: 1px;
+  background-color: rgb(180,251,196);
+  border-radius: 7px;
+  border: 1px solid grey;
+  border-top: 1px solid grey;
+  position: absolute;
+  text-align: center;
+
+}
+
+#time-data
+{
+  width: 70%;
+  text-align: center;
+  margin-top: 25px;
+
+}
+
+#myDiv
+{
+  position: relative;
+}
+
+#time-info
+{
+  color: rgb(59, 184, 247);
+  padding-left: 10px;
+}
+
+#time-info:hover
+{
+  color: rgb( 0, 111, 189);
+}
+
+#title_col5
+{
+  display: inline;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+#num4, #num5, #TLA, #time
+{
+  padding-left: 10px;
+}
