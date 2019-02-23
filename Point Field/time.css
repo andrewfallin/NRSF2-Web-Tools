@@ -1,0 +1,221 @@
+
+#footer
+{
+  margin-top: 50px;
+}
+
+#lin_abs
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+
+  background-color: rgb(180,251,196);
+}
+
+#submit_button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#sss-button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+}
+
+#timeac
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#time-button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#timeac:hover
+{
+  font-weight: 150;
+}
+
+#time-button:hover
+{
+  font-weight: 150;
+
+}
+
+#accordion
+{
+  margin-bottom: 15px;
+}
+
+#timeACCO
+{
+    margin-bottom: 15px;
+}
+.dropdown
+{
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+.dropdown-menu
+{
+  padding-left: 10px;
+  background-color: rgb(227,227,227);
+  border-radius: 7px;
+  border-color: grey;
+
+}
+
+.dropdown-menu li:hover
+{
+  font-weight: 650;
+
+}
+
+.dropdown-menu > li > a
+{
+  color: black;
+
+}
+
+
+#g1 ,#g2, #g3
+{
+  font-weight: 80;
+  color: black;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#g1 ,#g2, #g3:hover
+{
+    font-weight: 150;
+}
+
+#thick_button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#lin_button
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+#export
+{
+  font-weight: 80;
+  font-size: 1.25rem;
+  border-color: grey;
+  background-color: rgb(180,251,196);
+}
+
+
+#lin_abs:hover
+{
+  font-weight: 150;
+}
+
+#submit_button:hover
+{
+  font-weight: 150;
+}
+
+#thick_button:hover
+{
+    font-weight: 150;
+}
+
+#lin_button:hover
+{
+    font-weight: 150;
+}
+
+#export:hover
+{
+  font-weight: 150;
+}
+.thick-block
+{
+  padding-bottom: 3px;
+}
+
+#count-data
+{
+  width: 60%;
+  font-size: 8pt;
+  top: 1px;
+  background-color: rgb(180,251,196);
+  border-radius: 7px;
+  border: 1px solid grey;
+  border-top: 1px solid grey;
+  position: absolute;
+  text-align: center;
+
+}
+
+#time-data
+{
+  width: 70%;
+  text-align: center;
+}
+
+#myDiv
+{
+  position: relative;
+}
+
+#info
+{
+  color: rgb(59, 184, 247);
+  padding-left: 10px;
+}
+
+#info:hover
+{
+  color: rgb( 0, 111, 189);
+}
+
+#title_col5
+{
+  display: inline;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+#num4, #num5, #TLA, #time
+{
+  padding-left: 10px;
+}
+
+#trace_tab
+{
+  width: 85%;
+}
