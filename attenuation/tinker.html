@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <title>NRSF2!</title>
+</head>
+
+<body>
+  <h1>NRSF2!</h1>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="tanner.js"></script>
+  <script src="my_objects.js"></script>
+  <script src="element_objects.js"></script>
+  <script src="formula_object.js"></script>
+  <script src="plot.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="nrsf2.css">
+
+  <!--
+  <div>
+    <h4 id="demo">Some Words</h4>
+    <button type="button" class="btn btn-default" onclick="myfunction()">Click Me</button>
+  </div>
+-->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+
+        <div class="form_group" id="top_form">
+          <label form="enter_an_element">Enter an Element: </label>
+          <input type="text" class="form_control" id="num1" placeholder="(ex. Fe3)"></input>
+        </div>
+        <div class="form_group">
+          <label form="enter_an_element">Enter a Density: </label>
+          <input type="text" class="form_control" id="num2" placeholder="(ex. 5)"></input>
+
+        </div>
+
+        <button type="button" class="btn btn-default" onclick="object_handler()" id="submit_button">Submit</button>
+        <button type="button" class="btn btn-default" onclick="clear_this()" id="clear_button">Clear</button>
+
+
+        <div id="element_cluster"></div>
+
+      </div>
+
+      <div class="col-lg-3">
+        <p id="el"></p>
+        <h5 id="title_col1">True Absorbtion</h5>
+        <p id="element_col1"></p>
+
+        <div id="totals">
+          <h5 id="totals_title">Totals</h5>
+          <div id="tots"></div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-3">
+        <p id="el2"></p>
+        <h5 id="title_col2">Scattering Absorbtion</h5>
+        <p id="element_col2"></p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
